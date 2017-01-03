@@ -1,0 +1,65 @@
+name: minetest-luk3yx
+version: "0.4.15"
+summary: "luk3yx's unofficial Minetest builds. Credit to the snappy playpen."
+description: |
+  Minetest is a minecraft-inspired game written from scratch and licensed
+  under the LGPL (version 2.1 or later). It supports both survival and
+  creative modes along with multiplayer support, dynamic lighting, and an
+  "infinite" map generator.
+confinement: strict
+
+apps:
+  minetest:
+    command: launcher
+    plugs: [x11, network, network-bind, unity7, opengl, pulseaudio]
+  minetestserver:
+    command: launcher --server
+    plugs: [x11, network, network-bind, unity7, opengl, pulseaudio]
+  minetest-luk3yx:
+    command: launcher
+    plugs: [x11, network, network-bind, unity7, opengl, pulseaudio]
+
+parts:
+  launcher:
+    source: .
+    plugin: dump
+    organize:
+      minetest.desktop: 'meta/gui/minetest.desktop'
+      minetest.svg: 'meta/gui/minetest.svg'
+  minetestgame:
+    source: https://github.com/minetest/minetest_game.git
+    plugin: dump
+    source-branch: stable-0.4
+    organize:
+      '*': 'share/minetest/games/minetest_game/'
+  minetest:
+    source: https://github.com/minetest/minetest.git
+    source-branch: stable-0.4
+    plugin: cmake
+    configflags: [-DRUN_IN_PLACE=FALSE]
+    build-packages:
+      - cmake
+      - gcc
+      - g++
+      - gettext
+      - imagemagick
+      - libbz2-dev
+      - libcurl4-gnutls-dev
+      - libfreetype6-dev
+      - libglu1-mesa-dev
+      - libirrlicht-dev
+      - libjpeg-dev
+      - libjsoncpp-dev
+      - libleveldb-dev
+      - libluajit-5.1-dev
+      - libogg-dev
+      - libopenal-dev
+      - libpng-dev
+      - libpulse-dev
+      - libsqlite3-dev
+      - libvorbis-dev
+      - libx11-dev
+      - zlib1g-dev
+    stage-packages:
+      - libgl1-mesa-dri
+      - libpulse0

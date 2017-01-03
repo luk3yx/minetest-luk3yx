@@ -1,0 +1,5 @@
+#!/bin/bash
+[ -z "$1" ] && set "Minor updates on $(date -u)"
+git add .
+git commit -m "$1"
+git push -f -u origin master
