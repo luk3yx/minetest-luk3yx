@@ -20,9 +20,9 @@ Note: Make sure that snapd is installed before running the above commands.
 
 Snaps are universal Linux packages.
 
-**Where can I find snapcraft.yaml?**
+**Where can I find a forum page for this?**
 
-You can find it [here, on GitHub](https://github.com/luk3yx/minetest-luk3yx). Remember it is also licensed under LGPL 2.1+.
+You can find it [here](https://forum.minetest.net/viewtopic.php?f=42&t=16088).
 
 **How do I install snapd?**
 
