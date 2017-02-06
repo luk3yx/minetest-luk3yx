@@ -12,9 +12,11 @@ apps:
   minetest:
     command: launcher
     plugs: [x11, network, network-bind, unity7, opengl, pulseaudio]
+    aliases: [minetest]
   minetestserver:
     command: launcher --server
     plugs: [x11, network, network-bind, unity7, opengl, pulseaudio]
+    aliases: [minetestserver]
   minetest-luk3yx:
     command: launcher
     plugs: [x11, network, network-bind, unity7, opengl, pulseaudio]
@@ -26,6 +28,7 @@ parts:
     organize:
       minetest.desktop: 'meta/gui/minetest.desktop'
       minetest.svg: 'meta/gui/minetest.svg'
+      icon.png: 'meta/icon.png'
   minetestgame:
     source: https://github.com/minetest/minetest_game.git
     plugin: dump
