@@ -6,6 +6,7 @@ description: |
   under the LGPL (version 2.1 or later). It supports both survival and
   creative modes along with multiplayer support, dynamic lighting, and an
   "infinite" map generator.
+grade: stable
 confinement: strict
 
 apps:
@@ -57,7 +58,7 @@ parts:
       - libluajit-5.1-dev
       - libogg-dev
       - libopenal-dev
-      - libpng-dev
+      - libpng16-dev
       - libpulse-dev
       - libsqlite3-dev
       - libvorbis-dev
