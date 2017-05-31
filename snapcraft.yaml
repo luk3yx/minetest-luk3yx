@@ -58,7 +58,7 @@ parts:
       - libluajit-5.1-dev
       - libogg-dev
       - libopenal-dev
-      - libpng-dev
+      - libpng16-dev
       - libpulse-dev
       - libsqlite3-dev
       - libvorbis-dev
