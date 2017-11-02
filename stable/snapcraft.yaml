@@ -24,12 +24,8 @@ apps:
 
 parts:
   launcher:
-    source: .
+    source: snap/scripts
     plugin: dump
-    organize:
-      minetest.desktop: 'meta/gui/minetest.desktop'
-      minetest.svg: 'meta/gui/minetest.svg'
-      icon.png: 'meta/icon.png'
   minetestgame:
     source: https://github.com/minetest/minetest_game.git
     plugin: dump
@@ -67,3 +63,4 @@ parts:
     stage-packages:
       - libgl1-mesa-dri
       - libpulse0
+      - libcurl3-gnutls
