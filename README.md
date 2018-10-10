@@ -1,6 +1,9 @@
 # luk3yx's unofficial Minetest snap
 This is my unofficial Minetest snap package, derived from the Minetest snap in the snappy playpen.
 
+**NOTE**: The `snapcraft.yaml` here is now mostly copied from the
+[official snap](https://github.com/snapcrafters/minetest).
+
 ## How to install
 **Using sudo: (Ubuntu & Derivatives)**
 ~~~
@@ -50,6 +53,6 @@ sudo systemctl enable --now snapd.socket
 
 
 More:
-[http://snapcraft.io/docs/core/install](http://snapcraft.io/docs/core/install)
+[https://snapcraft.io/docs/core/install](https://snapcraft.io/docs/core/install)
 
-Credit to [http://snapcraft.io](http://snapcraft.io) for the resources shown in the FAQ.
+Credit to [https://snapcraft.io](https://snapcraft.io) for the resources shown in the FAQ.
