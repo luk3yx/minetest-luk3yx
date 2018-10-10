@@ -10,6 +10,7 @@ confinement: strict
 icon: snap/gui/minetest.svg
 version: stable
 version-script: git -C parts/minetest/src describe --tags
+base: core18
 
 apps:
   minetest:
