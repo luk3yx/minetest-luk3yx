@@ -1,10 +1,13 @@
-name: minetest-luk3yx
-summary: "luk3yx's unofficial Minetest builds."
+name: minetest-luk3yx-4
+summary: "luk3yx's Minetest 0.4 builds (old version)."
 description: |
   Minetest is a Minecraft-inspired game written from scratch and licensed
   under the LGPL (version 2.1 or later). It supports both survival and
   creative modes along with multiplayer support, dynamic lighting, and an
   "infinite" map generator.
+  
+  This snap is based on Minetest 0.4. If you want the latest bugfixes
+  and stability improvements, just use 'minetest-luk3yx'.
 grade: stable
 confinement: strict
 icon: snap/gui/minetest.svg
@@ -17,6 +20,9 @@ apps:
     command: launcher
     plugs: [desktop, desktop-legacy, x11, network, network-bind, opengl, pulseaudio]
   minetest-luk3yx:
+    command: launcher
+    plugs: [desktop, desktop-legacy, x11, network, network-bind, opengl, pulseaudio]
+  minetest-luk3yx-4:
     command: launcher
     plugs: [desktop, desktop-legacy, x11, network, network-bind, opengl, pulseaudio]
 
