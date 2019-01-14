@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=Minetest
+Name=Minetest 0.4
 GenericName=Minetest
 Comment=Multiplayer infinite-world block sandbox
-Exec=minetest-luk3yx
+Exec=minetest-luk3yx-4
 Icon=${SNAP}/meta/gui/minetest.svg
 Terminal=false
 Type=Application
