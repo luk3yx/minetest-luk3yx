@@ -37,9 +37,4 @@ if [ ! -e "$SNAP_USER_DATA/.minetest" ]; then
     ln -s . "$SNAP_USER_DATA/.minetest"
 fi
 
-# Make sure the server list is set to one that is guaranteed to support 0.4
-if ! grep -q '^serverlist_url' "$SNAP_USER_DATA/minetest.conf" 2>/dev/null; then
-    echo "serverlist_url = servers.edgy1.net" >> "$SNAP_USER_DATA/minetest.conf"
-fi
-
 exec "$SNAP/bin/minetest" "$@"
