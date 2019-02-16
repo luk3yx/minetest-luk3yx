@@ -37,4 +37,12 @@ if [ ! -e "$SNAP_USER_DATA/.minetest" ]; then
     ln -s . "$SNAP_USER_DATA/.minetest"
 fi
 
+# Make sure the base textures are linked
+t="$SNAP_USER_DATA/textures/base"
+s="$SNAP/share/minetest/textures/base"
+if [ ! -e "$t/pack" ] || [ "$(readlink -m "$t")" != "$s" ]; then
+    mkdir -p "$SNAP_USER_DATA/textures"
+    ln -sf "$s" "$t"
+fi
+
 exec "$SNAP/bin/minetest" "$@"
