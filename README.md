@@ -1,6 +1,8 @@
 # luk3yx's unofficial Minetest snap
 This is my unofficial Minetest snap package, derived from the Minetest snap in the snappy playpen.
 
+**This is the `minetest-0.4` branch, that builds https://github.com/luk3yx/minetest/tree/stable-0.4 by default.**
+
 **NOTE**: The `snapcraft.yaml` here is now mostly copied from the
 [official snap](https://github.com/snapcrafters/minetest).
 
