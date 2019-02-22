@@ -69,6 +69,7 @@ parts:
       - libpulse0
       - libcurl3-gnutls
       - libgl1-mesa-glx
+      - libirrlicht1.8
       - libxshmfence1
       - libxcb-sync1
       - libxcb-present0
