@@ -26,13 +26,13 @@ parts:
     plugin: dump
   minetestgame:
     source: https://github.com/minetest/minetest_game.git
-    source-branch: stable-0.4
+    source-branch: stable-5
     plugin: dump
     organize:
       '*': 'share/minetest/games/minetest_game/'
   minetest:
     source: https://github.com/minetest/minetest.git
-    source-branch: stable-0.4
+    source-branch: stable-5
     plugin: cmake
     configflags: ["-DRUN_IN_PLACE=FALSE", "-DCMAKE_BUILD_TYPE=Release"]
     build-packages:
