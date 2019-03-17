@@ -31,7 +31,7 @@ parts:
     source: snap/scripts
     plugin: dump
   minetestgame:
-    source: https://github.com/minetest/minetest_game.git
+    source: https://gitlab.com/luk3yx/minetest_game.git
     source-branch: stable-0.4
     plugin: dump
     organize:
