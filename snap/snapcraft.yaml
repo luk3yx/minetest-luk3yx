@@ -38,7 +38,7 @@ parts:
       '*': 'share/minetest/games/minetest_game/'
   minetest:
     source: https://github.com/luk3yx/minetest.git
-    source-branch: stable-0.4
+    source-branch: old-0.4-backports
     plugin: cmake
     configflags: ["-DRUN_IN_PLACE=FALSE", "-DCMAKE_BUILD_TYPE=Release"]
     build-packages:
