@@ -3,7 +3,7 @@ case "$SNAP_ARCH" in
     *86)
     ARCH="i386-linux-gnu"
     ;;
-    *64)
+    amd64)
     ARCH="x86_64-linux-gnu"
     ;;
     *)
@@ -44,5 +44,8 @@ if [ ! -e "$t/pack" ] || [ "$(readlink -m "$t")" != "$s" ]; then
     mkdir -p "$SNAP_USER_DATA/textures"
     ln -sf "$s" "$t"
 fi
+
+# Workaround for snap locale support
+export LC_ALL="C.UTF-8"
 
 exec "$SNAP/bin/minetest" "$@"

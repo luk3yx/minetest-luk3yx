@@ -1,6 +1,13 @@
 # luk3yx's unofficial Minetest snap
 This is my unofficial Minetest snap package, derived from the Minetest snap in the snappy playpen.
 
+# Deprecation
+
+This snap is now deprecated, you should install the
+[`minetest`](https://github.com/snapcrafters/minetest) snap instead. I will
+probably continue to update it, however I will not guarantee that it will have
+the latest version of Minetest.
+
 **NOTE**: The `snapcraft.yaml` here is now mostly copied from the
 [official snap](https://github.com/snapcrafters/minetest).
 
