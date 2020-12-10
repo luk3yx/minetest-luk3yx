@@ -80,6 +80,7 @@ parts:
       - libsnappy1v5
       - libfreetype6
       - libopenal1
+      - libopengl0
       - libluajit-5.1-2
       - libleveldb1v5
       - libjpeg-turbo8
