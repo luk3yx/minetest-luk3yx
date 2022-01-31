@@ -10,7 +10,7 @@ confinement: strict
 icon: snap/gui/minetest.svg
 version: stable
 version-script: git -C parts/minetest/src describe --tags | cut -d- -f1
-base: core18
+base: core20
 
 architectures:
   - build-on: amd64
@@ -70,6 +70,7 @@ parts:
       - libsqlite3-dev
       - libvorbis-dev
       - libx11-dev
+      - libzstd-dev
       - zlib1g-dev
     stage-packages:
       - libgl1-mesa-dri
