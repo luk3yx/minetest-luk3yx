@@ -55,7 +55,9 @@ parts:
     source: https://github.com/minetest/minetest.git
     source-branch: stable-5
     plugin: cmake
-    configflags: ["-DRUN_IN_PLACE=FALSE", "-DCMAKE_BUILD_TYPE=Release"]
+    cmake-parameters:
+      - -DRUN_IN_PLACE=FALSE
+      - -DCMAKE_BUILD_TYPE=Release
     after:
       - irrlicht
     build-packages:
