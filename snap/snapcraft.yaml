@@ -23,15 +23,15 @@ apps:
   minetest:
     command: launcher
     plugs: [desktop, desktop-legacy, x11, network, network-bind, opengl,
-        audio-playback]
+        audio-playback, pulseaudio]
   minetest-luk3yx:
     command: launcher
     plugs: [desktop, desktop-legacy, x11, network, network-bind, opengl,
-        audio-playback]
+        audio-playback, pulseaudio]
   minetestserver:
     command: launcher --server
     plugs: [desktop, desktop-legacy, x11, network, network-bind, opengl,
-        audio-playback]
+        audio-playback, pulseaudio]
 
 parts:
   launcher:
