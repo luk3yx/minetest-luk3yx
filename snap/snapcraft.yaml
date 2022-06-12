@@ -77,7 +77,6 @@ parts:
       - libpulse-dev
       - libsqlite3-dev
       - libvorbis-dev
-      - libxxf86vm-dev
       - libx11-dev
       - libzstd-dev
       - zlib1g-dev
@@ -97,7 +96,7 @@ parts:
       - libfreetype6
       - libopenal1
       - libluajit-5.1-2
-      - libleveldb1d
+      - libleveldb1v5
       - libjpeg-turbo8
       - libxxf86vm1
       - libxfixes3
