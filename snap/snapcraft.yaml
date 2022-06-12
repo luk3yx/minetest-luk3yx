@@ -10,13 +10,13 @@ confinement: strict
 icon: snap/gui/minetest.svg
 version: stable
 version-script: git -C parts/minetest/src describe --tags | cut -d- -f1
-base: core18
+base: core20
 
 architectures:
   - build-on: amd64
   - build-on: arm64
   - build-on: armhf
-  - build-on: i386
+#  - build-on: i386
   - build-on: ppc64el
 
 apps:
