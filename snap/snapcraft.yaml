@@ -50,6 +50,8 @@ parts:
     override-pull: |
       snapcraftctl pull
       tag=$(git describe --tags $(git rev-list --tags --max-count=1))
+      # Temporary hack to work around incompatibility with 5.5.1
+      if [ "$tag" = "1.9.0mt6" ]; then tag=1.9.0mt5; fi
       git checkout "$tag"
   minetest:
     source: https://github.com/minetest/minetest.git
