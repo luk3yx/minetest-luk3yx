@@ -49,10 +49,11 @@ fi
 export LC_ALL="C.UTF-8"
 
 # Make PulseAudio socket available inside the snap-specific $XDG_RUNTIME_DIR
-# Code from https://github.com/ubuntu/snapcraft-desktop-helpers/blob/ec861254c2a1d2447b2c589446e6cdf04c75c260/common/desktop-exports#L257-L264
+# Code originally from https://github.com/ubuntu/snapcraft-desktop-helpers/blob/ec86125/common/desktop-exports#L257-L264
 if [ -n "$XDG_RUNTIME_DIR" ]; then
-    pulsenative="pulse/native"
-    pulseaudio_sockpath="$XDG_RUNTIME_DIR/../$pulsenative"
+    # $XDG_RUNTIME_DIR may not exist yet, use readlink to get the parent
+    # directory anyway.
+    pulseaudio_sockpath=$(readlink -m "$XDG_RUNTIME_DIR/../pulse/native")
     if [ -S "$pulseaudio_sockpath" ]; then
         export PULSE_SERVER="unix:${pulseaudio_sockpath}"
     fi
